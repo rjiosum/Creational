@@ -8,7 +8,7 @@ class Email extends Notifier
 {
     protected $from;
 
-    public function __construct($to, $from)
+    public function __construct(string $to, string $from)
     {
         parent::__construct($to);
 
@@ -25,13 +25,13 @@ class Email extends Notifier
         return $isEmail ? true : false;
     }
 
-    public function send(): string
+    public function send(string $message): string
     {
         if (!$this->validate()) {
             throw new \InvalidArgumentException(
                 sprintf("%s is an invalid email address", $this->to)
             );
         }
-        return "This is an " .get_class($this)." to " . $this->to . " from " . $this->from . PHP_EOL;
+        return 'This is an ' . get_class($this) . ' sending message - "' . $message . '" to ' . $this->to . ' from ' . $this->from . PHP_EOL;
     }
 }

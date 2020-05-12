@@ -5,9 +5,9 @@ use App\Factory\NotifierFactory;
 require_once __DIR__.'/vendor/autoload.php';
 
 $sms = NotifierFactory::notify("SMS", "07111111111");
-echo $sms->send();
+echo $sms->send('Some useful message');
 
 $email = NotifierFactory::notify("Email", "rj.iosum@gmail.com");
-echo $email->send();
+echo $email->send('Some useful message');
 
 

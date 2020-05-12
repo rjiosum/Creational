@@ -11,5 +11,5 @@ abstract class Notifier
         $this->to = $to;
     }
     abstract public function validate() : bool;
-    abstract public function send() : string;
+    abstract public function send(string $message) : string;
 }

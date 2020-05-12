@@ -14,10 +14,10 @@ class NotifierFactory
      * @return Email|Sms
      * @throws Exception
      */
-    public static function notify($notifier, $to)
+    public static function notify(string $notifier, string $to)
     {
         if (empty($notifier)) {
-            throw new Exception("No notifier passed.");
+            throw new Exception("Invalid notifier.");
         }
         switch ($notifier) {
             case 'SMS':

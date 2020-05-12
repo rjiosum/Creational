@@ -13,3 +13,6 @@ The Factory method lets a class defer instantiation it uses to sub-classes”
 **Limitations**
 - no control of creation process. 
 - limited with params you can pass. 
+
+### UML
+ ![Class Diagram](UML.png)
